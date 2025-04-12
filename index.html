@@ -1,149 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fent Reactor</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background: radial-gradient(circle at top, #1a1a2e, #0f0c29);
-            color: white;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .container {
-            background: rgba(255, 255, 255, 0.3); /* 30% transparent */
-            padding: 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(12px); /* Glass effect */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            max-width: 500px;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .container:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        h1 {
-            font-size: 26px;
-            margin-bottom: 10px;
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            -webkit-background-clip: text;
-            color: transparent;
-            font-weight: 600;
-        }
-
-        .small-text {
-            font-size: 14px;
-            color: #bbb;
-            margin-bottom: 20px;
-        }
-
-        .button {
-            padding: 12px 24px;
-            font-size: 16px;
-            font-weight: bold;
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            margin: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 15px rgba(255, 69, 96, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 10px 20px rgba(255, 69, 96, 0.6);
-        }
-
-        .button::before {
-            content: "";
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            width: 150%;
-            height: 150%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 60%);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .button:hover::before {
-            opacity: 1;
-        }
-
-        #videoContainer {
-            margin-top: 20px;
-        }
-
-        iframe {
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fent Reactor</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <div class="container">
-        <h1>Fent Reactor is Reacting</h1>
-        <p class="small-text">تم إنقاذ chatgpt من إسرائيل، أيها الزنجي الأسود اللعين يا الله 😭</p>
+  <canvas id="snowCanvas"></canvas>
 
-        <button class="button" onclick="alert('9999999x fent given')">💉 Get Fent</button>
-        <button class="button" onclick="window.location.href='https://bigrat.monster/'">🐀 Big Rat</button>
-        <button class="button" onclick="playVideo()">Free Robux Nigga</button>
+  <div class="container">
+    <h1>Fent Reactor is Reacting</h1>
+    <p class="small-text">تم إنقاذ chatgpt من إسرائيل، أيها الزنجي الأسود اللعين يا الله 😭</p>
 
-        <div id="videoContainer"></div>
-    </div>
+    <button class="button" onclick="alert('9999999x fent given')">💉 Get Fent</button>
+    <button class="button" onclick="window.location.href='https://bigrat.monster/'">🐀 Big Rat</button>
+    <button class="button" onclick="playVideo()">Free Robux Nigga</button>
 
-    <script>
-        let video;
-        function playVideo() {
-            alert("اللعنة عليك يا نيغا هههههههههه🤣");
+    <div id="videoContainer"></div>
+  </div>
 
-            if (!video) {
-                video = document.createElement("iframe");
-                video.width = "480";
-                video.height = "270";
-                video.src = "https://www.youtube.com/embed/lBholeoYGDw?autoplay=1";
-                video.allow = "autoplay";
-                video.frameBorder = "0";
-
-                document.getElementById("videoContainer").appendChild(video);
-
-                let muteButton = document.createElement("button");
-                muteButton.innerText = "🔇 Mute Music";
-                muteButton.className = "button";
-                muteButton.onclick = muteVideo;
-                document.getElementById("videoContainer").appendChild(muteButton);
-            }
-        }
-
-        function muteVideo() {
-            video.src = "";
-        }
-    </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
